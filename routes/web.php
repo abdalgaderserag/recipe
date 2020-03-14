@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function () {
-    return redirect('/home');
+    return 's';
 });
 
-Auth::routes();
+Route::resource('/menu','MealController');
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');

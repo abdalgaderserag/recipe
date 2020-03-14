@@ -17,7 +17,7 @@ class CreateMealsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->double('price');
-            $table->time('time');
+//            $table->time('time');
             $table->text('describe');
             $table->text('image');
             $table->timestamps();
