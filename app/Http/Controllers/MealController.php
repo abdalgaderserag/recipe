@@ -36,7 +36,7 @@ class MealController extends Controller
      */
     public function store(Request $request)
     {
-        $meal = new Meal($request->except(['']));
+        $meal = new Meal($request->except(['_token']));
         $meal->image = '';
         $meal->save();
         return redirect()->route('menu.index');
@@ -56,11 +56,12 @@ class MealController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Meal $meal
+     * @param  $id
      * @return \Illuminate\View\View
      */
-    public function edit(Meal $meal)
+    public function edit($id)
     {
+        $meal = Meal::find($id);
         return view('meals.edit')->with(['meal' => $meal]);
     }
 
@@ -68,12 +69,17 @@ class MealController extends Controller
      * Update the specified resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \App\Meal $meal
+     * @param $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, Meal $meal)
+    public function update(Request $request, $id)
     {
-        $meal->update($request->except(['']));
+        $meal = Meal::find($id);
+        $meal->title = $request->title;
+        $meal->price = $request->price;
+        $meal->describe = $request->describe;
+        $meal->image = $request->image;
+        $meal->image = '';
         $meal->save();
         return redirect()->route('menu.index');
     }

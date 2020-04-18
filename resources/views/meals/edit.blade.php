@@ -1,8 +1,9 @@
-<form action="{{ route('menu.put') }}" method="post">
+<form action="{{ route('menu.update',$meal->id) }}" method="post">
     @csrf
-    <input type="text" name="title" required><br><br>
-    <input type="text" name="price" required><br><br>
-    <input type="text" name="describe" required><br><br>
-    <input type="text" name="image"><br><br>
+    @method('put')
+    <input type="text" name="title" value="{{ $meal->title }}" required><br><br>
+    <input type="text" name="price" value="{{ $meal->price }}" required><br><br>
+    <input type="text" name="describe" value="{{ $meal->describe }}" required><br><br>
+    <input type="text" name="image" value="{{ $meal->image }}"><br><br>
     <input type="submit" value="save">
 </form>
