@@ -15,6 +15,8 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('meal_id');
+            $table->bigInteger('order_id');
             $table->integer('quantity',false,true);
             $table->text('notes');
             $table->timestamps();

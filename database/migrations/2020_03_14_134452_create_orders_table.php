@@ -14,10 +14,10 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-//            $table->bigIncrements('id');
-            $table->uuid('id')->primary()->unique()->autoIncrement();
+            $table->bigIncrements('id');
+//            $table->uuid('id')->primary()->unique()->autoIncrement();
             $table->text('location');
-            $table->double('cost');
+            $table->double('cost'); //delev cost
             $table->time('time')->nullable();
             $table->timestamps();
         });
