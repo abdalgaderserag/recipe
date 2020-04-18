@@ -36,7 +36,7 @@ class MealController extends Controller
      */
     public function store(Request $request)
     {
-        $meal = new Meal($request->except(''));
+        $meal = new Meal($request->except(['']));
         $meal->image = '';
         $meal->save();
         return redirect()->route('menu.index');
@@ -73,7 +73,7 @@ class MealController extends Controller
      */
     public function update(Request $request, Meal $meal)
     {
-        $meal->update($request->except(''));
+        $meal->update($request->except(['']));
         $meal->save();
         return redirect()->route('menu.index');
     }

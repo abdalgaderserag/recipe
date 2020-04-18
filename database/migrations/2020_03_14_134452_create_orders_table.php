@@ -18,7 +18,7 @@ class CreateOrdersTable extends Migration
             $table->uuid('id')->primary()->unique()->autoIncrement();
             $table->text('location');
             $table->double('cost');
-            $table->time('time');
+            $table->time('time')->nullable();
             $table->timestamps();
         });
     }

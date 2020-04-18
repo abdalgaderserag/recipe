@@ -22,3 +22,5 @@ use Illuminate\Http\Request;
 
 //});
 
+Route::post('/order','OrderController@store');
+
