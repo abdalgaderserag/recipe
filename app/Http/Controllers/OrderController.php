@@ -37,14 +37,21 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $order = new Order($request->only([
-            'location', 'cost', 'time',
+//            'location', 'cost', 'time',
+            'location', 'cost',
         ]));
         $order->save();
-        foreach ($request->items as $item){
-
-            $i = new Item([$item->quantity,$item->notes,$item->meal_id]);
-            $i->order_id = $order->id;
-            $i->save();
+        try {
+            foreach ($request->items as $item) {
+                $i = new Item();
+                $i->quantity = $item['quantity'];
+                $i->notes = $item['notes'];
+                $i->meal_id = $item['meal_id'];
+                $i->order_id = $order->id;
+                $i->save();
+            }
+        } catch (\Exception $e) {
+            $order->forceDelete();
         }
 
         return response()->json($order);
