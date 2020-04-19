@@ -1,2 +1,13 @@
 // Variables
 @import 'variables';
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.header{
+  background-size: cover;
+  height: 760px;
+  width: 100%;
+}
