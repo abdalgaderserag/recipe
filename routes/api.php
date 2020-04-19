@@ -22,5 +22,4 @@ use Illuminate\Http\Request;
 
 //});
 
-Route::post('/order','OrderController@store');
-
+Route::resource('/order','OrderController');
