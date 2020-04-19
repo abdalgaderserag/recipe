@@ -31,7 +31,7 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/dashboard';
 
-    public function login(Request $request)
+    /*public function login(Request $request)
     {
         $this->validateLogin($request);
 
@@ -62,6 +62,6 @@ class LoginController extends Controller
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
-    }
+    }*/
 
 }
