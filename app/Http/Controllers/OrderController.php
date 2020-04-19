@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OrderRequest;
 use App\Item;
 use App\Meal;
 use App\Order;
@@ -45,6 +46,7 @@ class OrderController extends Controller
         $order->save();
         try {
             foreach ($request->items as $item) {
+//              TODO : the validation for item will be here
                 $i = new Item();
                 $i->quantity = $item['quantity'];
                 $i->notes = $item['notes'];

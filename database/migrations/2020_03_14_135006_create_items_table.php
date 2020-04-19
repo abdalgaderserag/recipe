@@ -18,7 +18,7 @@ class CreateItemsTable extends Migration
             $table->bigInteger('meal_id');
             $table->bigInteger('order_id');
             $table->integer('quantity',false,true);
-            $table->text('notes');
+            $table->text('notes')->nullable();
             $table->timestamps();
         });
     }
