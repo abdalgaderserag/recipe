@@ -45,17 +45,19 @@ class MealController extends Controller
         $meal = new Meal($request->except(['_token']));
         $meal->image = '';
         $meal->save();
+//        return response('',200);
         return redirect()->route('menu.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param \App\Meal $meal
+     * @param  $id
      * @return \Illuminate\View\View
      */
-    public function show(Meal $meal)
+    public function show($id)
     {
+        $meal = Meal::find($id);
         return view('meals.show')->with(['meal' => $meal]);
     }
 

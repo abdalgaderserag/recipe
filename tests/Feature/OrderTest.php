@@ -27,6 +27,9 @@ class OrderTest extends TestCase
             ]
         ]);
 
-//        $response->assertStatus(200);
+        $response->assertStatus(200);
+
+        $response = $this->get('/api/order');
+        $response->assertStatus(200);
     }
 }
