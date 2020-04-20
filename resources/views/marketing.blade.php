@@ -20,14 +20,16 @@
 <body>
 <div id="app">
     <div class="header"
-         style="background-image: url('images/pexels-photo-1565982.jpeg');display: flex;justify-content: center;">
+         style="background-image: url('images/pexels-photo-1565982.jpeg');">
+
+    </div>
+    <div class="header" style="background-color: #1515156b;margin-top: -760px;">
         <div style="margin: 10% 0 0 0;">
             <img src="images/brand.svg" style="width: 400px;" alt="">
             <div style="text-align: center;font-family: 'bad script';color: white;font-size: 28pt;">
                 A JAPANESE RESTAURANT
             </div>
         </div>
-
     </div>
 
     <div class="main-mark">

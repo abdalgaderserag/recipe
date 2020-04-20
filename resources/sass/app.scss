@@ -6,7 +6,7 @@ body {
   margin: 0;
 }
 
-#app{
+#app {
   background-color: #f8f8f8;
 }
 
@@ -14,6 +14,8 @@ body {
   background-size: cover;
   height: 760px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .main-mark {
@@ -28,8 +30,12 @@ body {
     .food-card {
       width: 60%;
       height: 460px;
+      cursor: pointer;
+      transition: all, 700ms;
+    }
+    .food-card:hover {
+      //background-size: cover;
       background-position: center;
-      background-size: cover;
     }
 
     :first-child {
