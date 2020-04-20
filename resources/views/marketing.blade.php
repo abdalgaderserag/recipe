@@ -19,17 +19,27 @@
 </head>
 <body>
 <div id="app">
-    <div class="header" style="background-image: url('images/pexels-photo-1565982.jpeg')">
+    <div class="header"
+         style="background-image: url('images/pexels-photo-1565982.jpeg');display: flex;justify-content: center;">
+        <div style="margin: 10% 0 0 0;">
+            <img src="images/brand.svg" style="width: 400px;" alt="">
+            <div style="text-align: center;font-family: 'bad script';color: white;font-size: 28pt;">
+                A JAPANESE RESTAURANT
+            </div>
+        </div>
+
     </div>
 
-    <div style="height: 860px">
-    </div>
+    <div class="main-mark">
+        <div style="height: 860px;">
+        </div>
 
-    <div style="width: 100%;display: flex;flex-wrap: wrap">
-        <div style="width: 40%;height:600px;background-image: url('images/food/pexels-photo-1633578.jpeg');background-position: center;background-size: cover;"></div>
-        <div style="width: 60%;height: 600px;background-image: url('images/food/pexels-photo-461198.jpeg');background-position: center;background-size: cover;"></div>
-        <div style="width: 60%;height: 600px;background-image: url('images/food/pexels-photo-376464.jpeg');background-position: center;background-size: cover;"></div>
-        <div style="width: 40%;height:600px;background-image: url('images/food/pexels-photo-255501.jpeg');background-position: center;background-size: cover;"></div>
+        <div class="food-view">
+            <div class="food-card" style="background-image: url('images/food/pexels-photo-1633578.jpeg');"></div>
+            <div class="food-card" style="background-image: url('images/food/pexels-photo-461198.jpeg');"></div>
+            <div class="food-card" style="background-image: url('images/food/pexels-photo-376464.jpeg');"></div>
+            <div class="food-card" style="background-image: url('images/food/pexels-photo-255501.jpeg');"></div>
+        </div>
     </div>
     <img src="images/fb40088c908451dd0fb1e904d43df5a8.jpg" style="width: 100%" alt="">
     <div style="width: 100%;height: 142px;background-color: #383838;margin-top: -4px;">

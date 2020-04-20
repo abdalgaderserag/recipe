@@ -1,13 +1,42 @@
 // Variables
 @import 'variables';
 
-body{
+body {
   padding: 0;
   margin: 0;
 }
 
-.header{
+#app{
+  background-color: #f8f8f8;
+}
+
+.header {
   background-size: cover;
   height: 760px;
   width: 100%;
+}
+
+.main-mark {
+  width: 72%;
+  margin-left: 14%;
+  background-color: white;
+  box-shadow: 1px 1px 3px 1px #c3c3c37a;
+  .food-view {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .food-card {
+      width: 60%;
+      height: 460px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    :first-child {
+      width: 40%;
+    }
+    :last-child {
+      width: 40%;
+    }
+  }
 }

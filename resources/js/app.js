@@ -7,7 +7,7 @@
 
 // require('./bootstrap');
 
-window.Vue = require('vue');
+// window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -17,14 +17,14 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-  import Echo from 'laravel-echo'
+  // import Echo from 'laravel-echo'
 
- window.io = require('socket,io-client');
-
- window.Echo = new Echo({
-     broadcaster: 'socket.io',
-     host: window.location.hostname + ':6001'
- });
+ // window.io = require('socket,io-client');
+ //
+ // window.Echo = new Echo({
+ //     broadcaster: 'socket.io',
+ //     host: window.location.hostname + ':6001'
+ // });
  
 
 // Vue.component('file-upload', require("vue-upload-component").default);
