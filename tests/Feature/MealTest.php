@@ -8,6 +8,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class MealTest extends TestCase
 {
+    use WithFaker, RefreshDatabase;
+
     /**
      * A basic feature test example.
      *
@@ -23,13 +25,14 @@ class MealTest extends TestCase
 
         $response->assertStatus(200);
 
-        $response = $this->post('/menu', [
-            "title" => 'asdadfe',
-            "price" => 205,
-            "describe" => 'asd aadskjals j ladsjk',
+        $meal = [
+            "title" => $this->faker->title,
+            "price" => (rand(10, 230) * 100) + 50,
+            "describe" => $this->faker->paragraph,
             "image" => '',
             "_token" => '',
-        ]);
+        ];
+        $response = $this->post('/menu', $meal);
 
         $response->assertStatus(302);
 

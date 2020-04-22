@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return 's';
+    return view('marketing');
 });
 
 Route::resource('/menu','MealController');
